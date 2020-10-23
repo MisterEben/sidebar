@@ -1,0 +1,139 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: url('./assets/img/model.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    left: -250px;
+    background: #252525;
+    opacity: 0.9;
+    transition: all .3s ease;
+    z-index: 99;
+}
+
+.sidebar header{
+    text-align: center;
+    top: 25px;
+    line-height: 70px;
+    font-size: 25px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    user-select: none;
+}
+
+.sidebar ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #111;
+    padding: 5px 0 15px;
+} 
+
+.sidebar ul li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #c4adad; 
+    padding: 5px 0;  
+    box-sizing: border-box;
+}
+
+.sidebar ul li a i{
+    margin-right: 25px;
+    border: 1px solid #c4adad;
+    padding: 5px;
+}
+
+.sidebar ul li:hover{
+    margin-left: 10px;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #close{
+    position: absolute;
+    cursor: pointer;
+    background: #252525;
+    border-radius: 5px;
+}
+
+label #btn{
+    top: 20px;
+    left: 50px;
+    font-size: 30px;
+    color: #ffff;
+    padding: 4px 8px;
+    z-index: 50;
+}
+
+label #close{
+    font-size: 15px;
+    color: #972828;
+    left: 225px;
+    border: 1px solid #111;
+    padding: 2px 5px;
+    z-index: 100;
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    opacity: 0;
+}
+#check:checked ~ label #close{
+    opacity: 0.8;
+}
+
+section{
+    height: 80vh;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+
+
+
+/* ********************** */
+
+.header-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header-box .navbar{
+    top: 0;
+}
+
+nav{
+    background: #252525;
+    width: 100%;
+    position: absolute;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+}
+nav ul li a{
+    color: #fff;
+}
